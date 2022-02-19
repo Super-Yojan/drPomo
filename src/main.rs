@@ -14,7 +14,7 @@ fn main() {
     let mut args = Cli{
         pomo: pomo.parse().expect("Not a number!"),
         pomo_break : pomo_break.parse().expect("Not a number"),
-        is_break: true,
+        is_break: false,
     };
     loop{
         // TODO: Read the notify_path from a config file
@@ -25,7 +25,7 @@ fn main() {
         }
         else{
             pomo_timer(args.pomo);
-            notify("Take a break !!!".to_string(), "/home/drmoscovium/Music/notification/get_back_to_work.ogg".to_string());
+            notify("Take a break !!!".to_string(), "/home/drmoscovium/Music/notification/take_a_break.ogg".to_string());
             args.is_break = true;
         }
     }
