@@ -22,6 +22,7 @@ cp target/release/pomo ~/.local/bin
 set -g status-right "#(pomo <session-time> <break-time>)"
 ```
 
+[](res/TmuxExample.gif)
 ### Config for polybar
 ```
 
