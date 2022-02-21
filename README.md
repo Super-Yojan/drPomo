@@ -24,8 +24,8 @@ set -g status-right "#(pomo <session-time> <break-time>)"
 
 ![](res/TmuxExample.gif)
 ### Config for polybar
-```
 
+```
 [module/pomodoro]
 type = custom/script
 exec = ~/.local/bin/pomo 25 5 
@@ -33,7 +33,7 @@ tail = true
 ```
 
 
-### ToDo
+### To-Do
 
 - [ ] Read Notification from config file
 

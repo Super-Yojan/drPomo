@@ -19,12 +19,12 @@ fn main() {
     loop{
         // TODO: Read the notify_path from a config file
         if args.is_break {
-            pomo_timer(args.pomo_break);
+            timer(args.pomo_break);
             notify("Get back to work!!!!".to_string(), "/home/drmoscovium/Music/notification/get_back_to_work.ogg".to_string());
             args.is_break = false;
         }
         else{
-            pomo_timer(args.pomo);
+            timer(args.pomo);
             notify("Take a break !!!".to_string(), "/home/drmoscovium/Music/notification/take_a_break.ogg".to_string());
             args.is_break = true;
         }
@@ -32,7 +32,7 @@ fn main() {
 
 }
 
-fn pomo_timer(time: u64){
+fn timer(time: u64){
     let mut seconds: u64 = time * 60;
     loop{
         sleep(Duration::new(1,0));
